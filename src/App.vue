@@ -4,12 +4,14 @@ import Navbar from '@/components/Navbar.vue'
 </script>
 
 <template>
-  <div class="md:flex h-screen overflow-hidden select-none relative">
+  <div class="md:flex h-screen select-none relative">
     <Sidebar />
 
-    <main class="flex-1 md:overflow-y-auto flex flex-col">
+    <div class="flex-1 overflow-auto flex flex-col">
       <Navbar />
-      <router-view />
-    </main>
+      <main>
+        <router-view />
+      </main>
+    </div>
   </div>
 </template>

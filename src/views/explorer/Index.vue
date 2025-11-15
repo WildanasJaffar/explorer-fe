@@ -30,7 +30,7 @@ const clearSelection = () => selected.value = ''
 </script>
 
 <template>
-  <div class="p-3 select-none" @click.self="clearSelection">
+  <div class="p-2 select-none" @click.self="clearSelection">
     <div v-if="!subfolderview_datas.length" class="text-gray-500">This folder is empty</div>
 
     <ul v-for="item in subfolderview_datas">
