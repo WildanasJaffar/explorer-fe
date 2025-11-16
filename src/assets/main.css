@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+.custom-table {
+  @apply w-full;
+}
+
+.custom-table thead tr {
+  @apply divide-gray-200 divide-x;
+}
+
+.custom-table thead th {
+  @apply relative text-left px-2 py-1 font-semibold;
+}
+
+.custom-table tbody tr {
+  @apply rounded cursor-pointer transition-colors select-none divide-gray-200 divide-x hover:bg-gray-200;
+}
+
+.custom-table tbody tr.selected {
+  @apply bg-blue-50 hover:bg-blue-100 text-blue-600;
+}
+
+.custom-table tbody tr td {
+  @apply px-2 py-1;
+}

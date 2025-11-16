@@ -14,7 +14,7 @@ const path = computed(() => folder_store.path || [])
 </script>
 <template>
     <nav class="bg-white sticky top-0 left-0 w-full flex md:flex-row flex-col md:items-center md:justify-between border-b border-gray-300">
-        <div class="p-2 text-sm text-gray-700 flex items-center overflow-auto">
+        <div class="p-2 text-sm text-gray-700 flex items-center overflow-x-auto overflow-y-hidden">
           <button class="md:hidden block mx-1" type="button" @click="sidebar_store.is_mobile_expanded = true">
             <TextAlignStart class="size-4" />
           </button>

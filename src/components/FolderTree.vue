@@ -36,12 +36,12 @@ watch(() => props.folders, () => {
   <ul class="pl-2 select-none">
     <li v-for="folder in folders" :key="folder.id">
       <div
-        class="cursor-pointer flex items-center gap-2 transition-all p-1"
+        class="cursor-pointer flex items-center gap-2 transition-all p-1 truncate"
         :class="folder.id === selectedId ? 'bg-blue-50 text-blue-600 hover:bg-blue-100' : 'hover:bg-gray-200'"
         @click="onSelect(folder)"
         @dblclick="toggle(folder.id)"
       >
-        <ChevronRight @click.stop="toggle(folder.id)" class="size-4 transition-all" :class="{'rotate-90': expanded.includes(folder.id)}" />
+        <ChevronRight @click.stop="toggle(folder.id)" class="size-4 min-w-4 transition-all" :class="{'rotate-90': expanded.includes(folder.id)}" />
         {{ folder.id == -1 ? '🏠' : '📁' }} {{ folder.name }}
       </div>
 
