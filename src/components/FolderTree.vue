@@ -42,9 +42,7 @@ watch(() => props.folders, () => {
         @dblclick="toggle(folder.id)"
       >
         <ChevronRight @click.stop="toggle(folder.id)" class="size-4 transition-all" :class="{'rotate-90': expanded.includes(folder.id)}" />
-        <!-- <div v-else class="size-4"></div> -->
-        {{ folder.id == -1 ? '🏠' : '📁' }}
-        {{ folder.name }}
+        {{ folder.id == -1 ? '🏠' : '📁' }} {{ folder.name }}
       </div>
 
       <FolderTree
